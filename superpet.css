@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(222, 222, 0);
+    margin-left: 120px;
+}
+
+.quadro1 {
+    width: 1400px;
+    height: 900px;
+}
+
+.topo {
+    /*margin-left: 140px;*/
+    margin-top: 65px;
+}
+
+.logo-text {
+    width: 166.272px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-right: 130.73px;
+
+    color: black;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.links-bar {
+    margin-top: 68px;
+    display: inline-block;
+}
+
+.link {
+    display: inline;
+
+    width: 58px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-right: 38px;
+
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.corpo {
+    display: flex;
+
+    /*padding-left: 140px;
+    padding-top: 166px;
+    padding-right: 128px;
+    padding-bottom: 68px;*/
+}
+
+h1 {
+    width: 589px;
+
+    margin-right: 11px;
+    margin-top: 236px;
+
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.descricao p {
+    width: 560px;
+    height: 105px;
+    flex-shrink: 0;
+    margin-right: 38px;
+    margin-top: 26px;
+
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.agendar {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+
+    width: 259px;
+    height: 84px;
+    padding: 27px 10px;
+    flex-shrink: 0;
+
+    border-radius: 30px;
+    background: black;
+
+    display: block;
+
+    margin-top: 27px;
+}
+
+@media screen {
+    
+}
