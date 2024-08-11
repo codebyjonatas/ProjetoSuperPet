@@ -1,131 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
 
+/* Cores */
 :root {
---color-background: #dede00;
---color-branco: #ffffff;
---color-preto: #000000;
+    --color-background: #dede00;
+    --color-branco: #ffffff;
+    --color-preto: #000000;
 }
 
+/* Regras Globais */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color:var(--color-background);
+    background-color: var(--color-background);
     margin-left: 120px;
 }
 
+/* Layout Principal */
 .quadro1 {
     width: 1400px;
     height: 900px;
 }
 
+/* Cabeçalho */
 .topo {
-    /*margin-left: 140px;*/
     margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo-text {
-    width: 166.272px;
-    height: 24px;
-    flex-shrink: 0;
-    margin-right: 130.73px;
-
-    color:var(--color-preto);
+    color: var(--color-preto);
     font-size: 24px;
     font-weight: 800;
     text-decoration: none;
 }
 
 .links-bar {
-    margin-top: 68px;
-    display: inline-block;
+    display: flex;
+    gap: 38px;
+    /* Espaçamento entre links */
 }
 
 .link {
-    display: inline;
-
-    width: 58px;
-    height: 22px;
-    flex-shrink: 0;
-    margin-right: 38px;
-
     color: var(--color-preto);
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
 }
 
+/* Corpo */
 .corpo {
     display: flex;
-
-    /*padding-left: 140px;
-    padding-top: 166px;
-    padding-right: 128px;
-    padding-bottom: 68px;*/
+    align-items: center;
+    gap: 38px;
+    /* Espaçamento entre descrição e imagem */
 }
 
 h1 {
-    width: 589px;
-
-    margin-right: 11px;
-    margin-top: 236px;
-
-    color:var(--color-preto);
+    color: var(--color-preto);
     font-size: 40px;
     font-weight: 800;
+    margin-top: 236px;
 }
 
 .descricao p {
-    width: 560px;
-    height: 105px;
-    flex-shrink: 0;
-    margin-right: 38px;
-    margin-top: 26px;
-
     color: var(--color-preto);
     font-size: 24px;
     font-weight: 400;
+    margin-top: 26px;
+    max-width: 560px;
 }
 
+/* Botão Agendar */
 .agendar {
     color: var(--color-branco);
     text-align: center;
-    font-family: 'Roboto';
     font-size: 24px;
     font-weight: 400;
     text-decoration: none;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 259px;
+    /* Largura do botão */
     height: 84px;
-    padding: 27px 10px;
-    flex-shrink: 0;
-
+    /* Altura do botão */
+    padding: 0;
+    /* Remove o padding padrão para evitar distorções */
     border-radius: 30px;
     background: var(--color-preto);
-
-    display: block;
-
     margin-top: 27px;
 }
 
+/* Responsividade */
 @media screen and (max-width: 900px) {
     .quadro1 {
         width: 375px;
         height: 667px;
     }
 
-
     body {
-        background-color: var(--color-background);
         margin-left: 20px;
     }
 
     .topo {
-        margin-top: 0px;
+        margin-top: 0;
         width: 375px;
     }
 
@@ -133,64 +118,42 @@ h1 {
         margin-right: 30px;
     }
 
-.links-bar {
-    margin-top: 28px;
-}
-
-    .link {
-        /*margin-right: 12px;*/
+    .links-bar {
+        margin-top: 28px;
+        gap: 12px;
+        /* Ajusta o espaçamento entre links em dispositivos menores */
     }
 
     .corpo {
-        display: flex;
-    
-        /*padding-left: 140px;
-        padding-top: 166px;
-        padding-right: 128px;
-        padding-bottom: 68px;*/
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
     }
 
     h1 {
-        width: 375px;
-    
-        /*margin-right: 11px;*/
         margin-top: 100px;
-    
-        color:var(--color-preto);
-        font-size: 40px;
-        font-weight: 800;
+        font-size: 32px;
+        /* Ajusta o tamanho da fonte em dispositivos menores */
     }
 
     .descricao p {
         max-width: 360px;
-        height: 105px;
-        /*margin-right: 38px;*/
         margin-top: 28px;
-    
-        color: var(--color-preto);
-        font-size: 24px;
-        font-weight: 400;
     }
 
     .agendar {
-        color: var(--color-branco);
-        text-align: center;
-        font-family: 'Roboto';
-        font-size: 24px;
-        font-weight: 400;
-        text-decoration: none;
-    
-        width: 259px;
-        height: 84px;
-        padding: 27px 10px;
-        flex-shrink: 0;
-    
-        border-radius: 30px;
-        background: var(--color-preto);
-    
-        display: block;
-    
-        margin-top: 30px;
+        width: 100%;
+        /* O botão ocupa a largura total disponível */
+        max-width: 259px;
+        /* Largura máxima para manter a estética */
+        height: 60px;
+        /* Ajusta a altura em dispositivos menores */
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte */
+        padding: 0;
+        /* Remove o padding para consistência */
+        margin-top: 20px;
+        /* Ajusta a margem superior */
     }
 
     img {
